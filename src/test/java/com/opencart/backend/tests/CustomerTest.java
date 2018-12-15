@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.opencart.backend.model.CustomerRegistry.getCustomer;
 import static com.opencart.backend.model.UserRegistry.getAdmin;
+import static com.opencart.backend.tests.Annotations.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 //todo: Implement assertions using database
@@ -16,6 +17,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class CustomerTest extends TestBase {
 
   @Test
+  @Fast
+  @UI
   @DisplayName("Adding of New customer with only required fields")
   void canAddNewCustomerWithOnlyRequiredData() {
     Customer customer = getCustomer();
@@ -34,6 +37,7 @@ class CustomerTest extends TestBase {
   }
 
   @Test
+  @UI
   @DisplayName("Adding of New customer with other data enabled")
   void canAddNewCustomerWithOtherCustomerDataEnabled(){
     Customer customer = getCustomer();

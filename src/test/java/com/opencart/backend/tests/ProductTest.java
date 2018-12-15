@@ -78,7 +78,7 @@ class ProductTest extends TestBase {
   }
 
 
-  @Disabled
+  @Disabled("For demonstration purposes")
   @Test
   @DisplayName("Modify name of existing product")
   void canEditExistingProductModifyProductName(){
